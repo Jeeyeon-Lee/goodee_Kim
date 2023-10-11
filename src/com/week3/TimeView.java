@@ -22,7 +22,7 @@ public class TimeView {
 		
 	}
 	public void initDisplay() {
-		System.out.println("TimeView : "+jlbTime);
+		System.out.println("TimeView : "+jlbTime);//시간출력되지 않음
 		tc.start();
 		jlbTime.setFont(font);
 		jf.add("North", jlbTime);

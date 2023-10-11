@@ -64,8 +64,8 @@ public class BaseBallGameView extends JFrame implements ActionListener{
 	JButton jbtn_clear 	= new JButton("지우기");
 	JButton jbtn_exit 	= new JButton("나가기");
 	int my[]  = new int[3];
-	int com[] = new int[3];
-	int cnt = 0;//++cnt 힌트 문장에서 순번을 출력하는 변수
+	int com[] = new int[3];//컴터가 채번한 숫자 담기 -BaseBallGameUI or BaseBallGameLogic or BaseBallGameEvent
+	int cnt = 0;//++cnt 힌트 문장에서 순번을 출력하는 변수 - BaseBallGameEvent
 	//생성자 선언하기
 	BaseBallGameView(){
 		ranCom();//이 메소드 딱 한번만 호출된다.
@@ -186,7 +186,7 @@ public class BaseBallGameView extends JFrame implements ActionListener{
 		jf.setTitle("야구 숫자 게임 Ver1.0");
 		jf.setSize(400, 300);
 		jf.setVisible(true);
-	}
+	}////////////////end of initDisplay ///////////////
 	public static void main(String[] args) {
 		BaseBallGameView bbGame = new BaseBallGameView();
 		bbGame.initDisplay();
