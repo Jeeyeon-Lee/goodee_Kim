@@ -20,8 +20,8 @@ public class BorderLayout1 {
 		}
 		*/
 		jf.add("East",jbtns[0]);
-		jf.add("North",jbtns[3]);
-		jf.add("South",jbtns[2]);
+		//jf.add("North",jbtns[3]);
+		//jf.add("South",jbtns[2]);
 		jf.add("Center",jbtns[4]);
 		jf.add("West",jbtns[1]);
 		jf.setSize(500, 400);
