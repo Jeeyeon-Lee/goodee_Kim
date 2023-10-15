@@ -4,6 +4,13 @@ public class DeptDTO {
 	private int deptno;
 	private String dname;
 	private String loc;
+	public DeptDTO() {}
+	//생성자의 파라미터 자리를 통해서 전역변수의 초기화(재정의) 함
+	public DeptDTO(int deptno, String dname, String loc) {
+		this.deptno = deptno;
+		this.dname = dname;
+		this.loc = loc;
+	}
 	private EmpDTO empDTO;
 	public EmpDTO getEmpDTO() {
 		return empDTO;
