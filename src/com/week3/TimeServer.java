@@ -24,6 +24,7 @@ public class TimeServer extends Thread {
 				oos.writeObject(getTime());
 				try {
 					sleep(1000);
+					
 				} catch (Exception e) {
 					// TODO: handle exception
 				} 
@@ -54,7 +55,7 @@ public class TimeServer extends Thread {
 		ServerSocket server = null;
 		Socket client = null;
 		try {
-			server = new ServerSocket(port);
+			server = new ServerSocket(port);//
 		} catch (IOException e) {
 			System.out.println("해당포트는 이미 사용중입니다.");
 			try {
@@ -91,3 +92,29 @@ public class TimeServer extends Thread {
 
 
 }//end of TimeServer
+/*
+ * 서버측
+ * ServerSocket생성함 - SeverSocket sever = new ServerSocket(5000);
+ * 기다림 지속 --
+ * 그 다음 코드는 진행되지 못한다. -서버측에도 클라이언트와의 소통으로 인한 상태값을 로그로 남긴다. - JFrame
+ * initDisplay()
+ * 서버가 준비되기 전에 화면은 먼저 연다(출력,보여주자-로그를 출력하는 화면-JTextArea-멀티로우입력가능함)
+ * Socket client = server.accept();//서버소켓에 접속한 소켓정보를 쥐게 된다.
+ * 
+ * 클라이언트측
+ * new Socket("서버의 IP주소", 5000);//인스턴스화 -> 서버측에 클라이언트측의 소켓객체를 전달함 - 통신채널 열린다.(겨우 이거야)
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+

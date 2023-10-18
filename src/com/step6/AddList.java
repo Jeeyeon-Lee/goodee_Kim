@@ -7,7 +7,7 @@ import java.util.Map;
 
 import javax.swing.JButton;
 
-//import com.google.gson.Gson;
+import com.google.gson.Gson;
 /*
  * 업무요청에 대한 결과가 조인이 불가피할때 하나의 클래스로 제네릭을 사용할 수 없다.
  * Map인터페이스를 사용하는 것이 효과적임 - 키와 값으로 관리함
@@ -53,9 +53,9 @@ public class AddList {
 		map.put("dname", "ACCOUNTING");
 		list.add(map);
 		System.out.println(list);
-//		Gson g = new Gson();
-//		String temp = g.toJson(list);
-//		System.out.println(temp);
+		Gson g = new Gson();
+		String temp = g.toJson(list);
+		System.out.println(temp);
 	}
 
 }
