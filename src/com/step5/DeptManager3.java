@@ -32,10 +32,7 @@ public class DeptManager3 extends JFrame implements ActionListener{
 	//JDBC API 를 활용하여 오라클 서버에서 부서목록 조회하기
 	Connection 					con  	= null;//연결통로확보
 	PreparedStatement 	pstmt 	= null;//Connection생성되야 PreparedStatement메모리 로딩됨
-<<<<<<< HEAD
 	//데이터베이스가 지원하는 커서를 조작하는데 필요한 메소드를 정의하고 있는 인터페이스이다.
-=======
->>>>>>> 66257596022e1ac3f167617ea12acfdc0124ea6f
 	ResultSet						rs			= null;//open..cursor..fectch..close 커서를 조작해서 원하는 정보를 반환받음
 	//공통코드에서 재사용 가능한 메소드를 설계함
 	DBConnectionMgr dbMgr = null;                                                       
@@ -58,17 +55,12 @@ public class DeptManager3 extends JFrame implements ActionListener{
 	//A a = A.getInstance();//복제본을 허락하지 않고 원본 하나만 관리한다. - 싱글톤 패턴
 	//B  b = new A();//추상클래스 상속관계
 	//C c = new A();//인터페이스 구현체 클래스
-<<<<<<< HEAD
 	//접근제한자가 없는 경우는 friendly상태라 하는데
 	//다른 패키지에서 접근이 불가능한 상태임
 	//public>protected(패키지가 다르더라도 서로 상속관계이면 접근가능함)>friendly상태>private
 	public DeptManager3(){
 		//메소드를 통해서 객체를 주입받고 있는데 .연산자 앞에 인스턴스변수가 아니라 클래스 타입이 직접 사용되었다.
 		dbMgr  = DBConnectionMgr.getInstance();//초기화 하였다.
-=======
-	DeptManager3(){
-		dbMgr  = DBConnectionMgr.getInstance();
->>>>>>> 66257596022e1ac3f167617ea12acfdc0124ea6f
 		//Calendar cal = Calendar.getInstance();
 		initDisplay();
 	}////////////// end of DeptManager
@@ -91,17 +83,11 @@ public class DeptManager3 extends JFrame implements ActionListener{
 		this.setVisible(true);
 	}//////////// end of initDisplay  /////////////
 	//select가 모든 업무 페이지의 시작 페이지이므로  맡은 업무의 첫 시작임 - 
-<<<<<<< HEAD
 	//어떤 경우에 제네릭을 Map으로 가져갈 것인가? -  List<Map<String,Object>> -> 조인시에 선택한다
 	//현재 메소드 getDTOList는 무엇이 문제인가?
 	public List<DeptDTO> getDTOList(){//먼저 연습하고 Map을 연습 할것
 		System.out.println("제네릭 타입을 getter/setter로 처리할때");
 		List<DeptDTO> list = new ArrayList<>();//list.size()=0
-=======
-	public List<DeptDTO> getDTOList(){//먼저 연습하고 Map을 연습 할것
-		System.out.println("제네릭 타입을 getter/setter로 처리할때");
-		List<DeptDTO> list = new ArrayList<>();
->>>>>>> 66257596022e1ac3f167617ea12acfdc0124ea6f
 		StringBuilder sql = new StringBuilder();
 		sql.append("SELECT deptno, dname, loc FROM dept");//4건 모두 조회함 10,20,30,40
 		try {
@@ -115,10 +101,7 @@ public class DeptManager3 extends JFrame implements ActionListener{
 			DeptDTO dto = null;
 			while(rs.next()) {
 				//아래 코드에서 반복문이 실행될 때마다 서로 다른 주소번지가 4개 만들어지니까
-<<<<<<< HEAD
 				//문제점 - DeptDTO는 테이블 dept테이블을 클래스로 설계한 것이다.
-=======
->>>>>>> 66257596022e1ac3f167617ea12acfdc0124ea6f
 				dto = new DeptDTO(rs.getInt("deptno"), rs.getString("dname"),rs.getString("loc"));
 				//아래 코드를 작성하지 않으면 4개의 정보가 모두 유지되지 않음
 				list.add(dto);//0, null, null, 0 ,null, null, 0,null, null, 0 , null,null
@@ -137,7 +120,6 @@ public class DeptManager3 extends JFrame implements ActionListener{
 	public List<Map<String,Object>> getMapList(){//2개 이상의 테이블 조인시 - 이것으로 연습 더 많이
 		System.out.println("제네릭 타입을 Map으로 처리할 때");
 		List<Map<String,Object>> list = new ArrayList<>();
-<<<<<<< HEAD
 		//StringBuffer는 스레드안전, StringBuilder 불안전하다- 인터셉트를 당할 수 있다. - 로컬이니까 괜찮아
 		StringBuilder sql = new StringBuilder();//String과 비교할 때 하나로 관리를 함 - 메모리에 대한 이익이 있다.
 		//sql.append("SELECT deptno, dname, loc FROM dept");//4건 모두 조회함 10,20,30,40
@@ -176,8 +158,6 @@ public class DeptManager3 extends JFrame implements ActionListener{
 			e.printStackTrace();//stack메모리에 쌓여있는 에러 메시지 히스토리를 볼 수  있다.(라인번호와 함께 메시지 출력됨)
 		}		
 		
-=======
->>>>>>> 66257596022e1ac3f167617ea12acfdc0124ea6f
 		return list;
 	}	
 	//메인 메소드
@@ -233,7 +213,6 @@ public class DeptManager3 extends JFrame implements ActionListener{
 		//너 조회버튼 누른거야?
 		else if(obj == jbtnSelect) {
 			System.out.println("조회버튼 클릭");//log
-<<<<<<< HEAD
 			List<DeptDTO> list = getDTOList();//오라클 서버에서 조회한 결과를 쥐고 있다. - 리턴타입이 쥐고 있다.
 			while(dtm_dept.getRowCount()>0) {//dtm은 데이터셋(자바측)받는 클래스이다.
 				dtm_dept.removeRow(0);//0번째 로우를 지우는 이유는 로우가 삭제 될때 마다 dtm의 로우수가 줄어든다. - 왜?
@@ -247,23 +226,6 @@ public class DeptManager3 extends JFrame implements ActionListener{
 				v.add(2,dept.getLoc());
 				//addRow메소드의 오버로딩은 2가지 임 - 1)Vector, 2)Object[]
 				dtm_dept.addRow(v);//4번 반복 되니까 - 로우에 추가하는 코드를 4번 실행함 - list.size()=4
-=======
-			//웹 개발이더라도 html이 데이터를 쥘수는 없다
-			//html과 자바코드를 섞어쓰기가 가능한가? - 불가 - jsp공부함  - 자바자료구조를 JSON형식으로 넘기기
-			//dtm_dept는 실제 데이터를 포용함
-			//JTable은 클릭이벤트 같은 것은 가능함 - 실제 데이터를 쥐고 있지 못함
-			//getRowCount는 데이터의 로우 수 반환 - 3건
-			while(dtm_dept.getRowCount()>0) {//dtm은 데이터셋(자바측)받는 클래스이다.
-				dtm_dept.removeRow(0);//0번째 로우를 지우는 이유는 로우가 삭제 될때 마다 dtm의 로우수가 줄어든다. - 왜?
-			}
-			for(int i=0;i<deptList.size();i++) {
-				Map<String,Object> map = deptList.get(i);
-				Vector<Object>  v = new Vector<>();//3번 생성됨
-				v.add(0,map.get("DEPTNO"));
-				v.add(1,map.get("DNAME"));
-				v.add(2,map.get("LOC"));
-				dtm_dept.addRow(v);
->>>>>>> 66257596022e1ac3f167617ea12acfdc0124ea6f
 			}
 		}////////////////// end of if ///////////////
 		
