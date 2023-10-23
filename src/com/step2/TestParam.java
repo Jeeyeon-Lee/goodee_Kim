@@ -1,11 +1,12 @@
 package com.step2;
 
 class Param{
-	int ival;
+	int ival;//0->500->100
 }
 public class TestParam {
+	//
 	void effectParam(Param p) {//p = null;
-		p = new Param();
+		//p = new Param();
 		p.ival = 100;//사용할 수  없다. NullPointerException이 발동됨
 		System.out.println("sub ival ==> " + p.ival);		
 	}
