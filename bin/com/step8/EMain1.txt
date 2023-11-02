@@ -1,0 +1,22 @@
+package com.step8;
+//리턴타입 언제? 어떻게 쓴다
+//파라미터를 언제사용하고 어떤 역할을 가질 수 있나?
+class E{
+	int i;
+}
+public class EMain {
+	E e = null;
+	void m() {
+		e = new E();
+		System.out.println(e);
+		if(e!=null) {
+			System.out.println(e.i);			
+		}
+		System.out.println(" 요기");
+	}
+	public static void main(String[] args) {
+		EMain em = new EMain();
+		em.m();
+	}
+
+}

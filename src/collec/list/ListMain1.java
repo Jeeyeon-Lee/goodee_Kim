@@ -19,5 +19,7 @@ public class ListMain1 {
 		//list1 .연산자 다음의 nums변수는 전변이다.|지변이다.
 		list1.nums = new ArrayList<>();//이와같은 방법은 전변일때만 가능하다. 지변일땐 불가함 - 지변일땐 어떡하지??? - 리턴타입으로 해결함
 		System.out.println(list1.nums.size());
+		
 	}
+
 }
