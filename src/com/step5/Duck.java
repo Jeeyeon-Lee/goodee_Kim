@@ -11,7 +11,7 @@ public abstract class Duck {
 	FlyBehavior flyBehavior= null;
 	QuackBehavior quackBehavior = null;
 	public Duck() {}
-	public abstract void display();
+	public abstract void display();//메소드가 ;끝나면 호출이다. - 메소드 오버라이딩 대상이다 - 반드시 구현할것 - 강제성 - 명세서이다.
 	public void performFly() {
 		flyBehavior.fly();
 	}
