@@ -1,23 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-<<<<<<< HEAD
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
-=======
-	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
->>>>>>> 6da998696edd94be23a0eeaf9d1230aeb36da1c3
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-<<<<<<< HEAD
-	<classpathentry exported="true" kind="lib" path="src/exlib/gson-2.8.9.jar"/>
-	<classpathentry exported="true" kind="lib" path="src/exlib/mysql-connector-j-8.1.0.jar"/>
-	<classpathentry exported="true" kind="lib" path="src/exlib/ojdbc6.jar"/>
-=======
-	<classpathentry kind="lib" path="D:/workspace_java/dev_java/ojdbc6.jar"/>
-	<classpathentry kind="lib" path="D:/workspace_java/dev_java/mysql-connector-j-8.1.0.jar"/>
-	<classpathentry kind="lib" path="D:/workspace_java/dev_java/gson-2.8.9.jar"/>
->>>>>>> 6da998696edd94be23a0eeaf9d1230aeb36da1c3
+	<classpathentry kind="lib" path="src/exlib/gson-2.8.9.jar"/>
+	<classpathentry kind="lib" path="src/exlib/mysql-connector-j-8.1.0.jar"/>
+	<classpathentry kind="lib" path="src/exlib/ojdbc6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

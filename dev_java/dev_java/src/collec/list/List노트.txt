@@ -1,6 +1,0 @@
-1. 제네릭
-
-2. List<Integer>, List<String>
-
-3. List<DeptVO>, List<Map<String,Object>>
-:주소번지를 두 번{List, VO or  List, Map} 접근해야 값에 도달할 수 있다.
